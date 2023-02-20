@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Jörg Neumann",
+    "bio": "Jörg Neumann ist Mitgründer und Geschäftsführer der Aclue GmbH. Er berät seit vielen Jahren Unternehmen bei der Technologieauswahl, Architektur und dem Entwurf mobiler Apps. Für sein Engagement in diesem Bereich wurde er von Microsoft mehrfach mit dem „Most Valuable Professional“-Award ausgezeichnet. Sein Wissen vermittelt er regelmäßig in Form von Büchern, Beiträgen in Fachzeitschriften sowie als Sprecher und Trainer auf Konferenzen und Seminaren. Sie erreichen ihn über Twitter (@JoergNeumann) oder seinen Blog headwriteline.blogspot.com.",
+    "company": "Aclue GmbH",
+    "image": "jn.jpg",
+    "twitter": "http://twitter.com/JoergNeumann"
+  },
+  {
+    "id": 2,
+    "name": "André Krämer",
+    "bio": "André Krämer ist Geschäftsführer der Quality Bytes GmbH, freiberuflicher Trainer und Berater und Partner im www.IT-Visions.de-Expertennetzwerk. Seine Schwerpunkte liegen in den Bereichen Webentwicklung mit ASP.NET und JavaScript, App-Entwicklung mit Xamarin, Azure DevOps, Dokumentengenerierung und Reporting mit TX Text Control sowie der Analyse von Memory Leaks und Performanceproblemen. Er ist regelmäßiger Autor für LinkedIn Learning, wo er bereits mehr als zwanzig Videotrainings veröffentlicht hat. Außerdem ist er TX Text Control MVP und Microsoft MVP.",
+    "company": "Quality Bytes, www.IT-Visons.de",
+    "image": "ak.jpg",
+    "twitter": "https://twitter.com/codemurai"
+  },
+  {
+    "id": 3,
+    "name": "Rainer Stropek",
+    "bio": "Rainer Stropek ist seit über zwanzig Jahren als Unternehmer in der IT-Branche tätig. Er gründete und leitete in dieser Zeit mehrere IT-Dienstleistungsunternehmen und entwickelt derzeit mit seinem Team in seinem Unternehmen software architects die preisgekrönte Software time cockpit. Rainer hat Abschlüsse von der Höheren Technischen Lehranstalt für MIS, Leonding (AT) und der University of Derby (UK). Er ist Autor von mehreren Fachbüchern und Zeitschriftenartikeln im Bereich Microsoft .NET und C#. Seine technischen Schwerpunkte sind C# und das .NET Framework, XAML, die Microsoft Azure Plattform, SQL Server und Webentwicklung. Er tritt regelmäßig als Redner und Trainer auf renommierten Konferenzen in Europa und den USA auf. Im Jahr 2010 wurde er von Microsoft zu einem der ersten MVPs für die Windows Azure-Plattform ernannt. Seit 2015 ist er zudem Microsoft Regional Director.",
+    "company": "software architects",
+    "image": "rs.jpg",
+    "twitter": "https://twitter.com/rstropek"
+  },
+  {
+    "id": 4,
+    "name": "Thomas Claudius Huber",
+    "bio": "Thomas Claudius Huber ist Microsoft MVP im Bereich Windows Development und Senior Principal Consultant. Als Trainer, Berater und Entwickler ist er in den Bereichen C#, TypeScript, WPF, UWP, Angular und Azure unterwegs. Da ihn Benutzeroberflächen schon seit seinem Informatikstudium faszinierten, setzte er sich seit der ersten WPF-Version mit der UI-Programmierung mit XAML auseinander. Heute setzt er neben XAML-UIs begeistert Anwendungen mit TypeScript und Angular um. Er ist Autor verschiedenster Bücher, darunter \"Getting Started with TypeScript\" und das umfassende Handbuch zur Windows Presentation Foundation. Seine persönliche Webseite finden Sie unter https://www.thomasclaudiushuber.com",
+    "company": "Trivadis",
+    "image": "tch.jpg",
+    "twitter": "https://twitter.com/thomasclaudiush"
+  }
+]

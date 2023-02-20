@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Style TargetType="Button" x:Key="HoverButton">
+        <Setter Property="Padding" Value="30,15,30,15"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Shadow">
+            <Setter.Value>
+                <Shadow Brush="{AppThemeBinding Light=Black, Dark={StaticResource Gray200}}" Offset="4,4" Radius="15" Opacity="0.6"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="{StaticResource Secondary}" Offset="0.1"></GradientStop>
+                    <GradientStop Color="{StaticResource Tertiary}" Offset="0.3"></GradientStop>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"/>
+                    <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter Property="Shadow">
+                                <Setter.Value>
+                                    <Shadow Brush="{AppThemeBinding Light=Black, Dark={StaticResource Gray200}}" Offset="8,8" Radius="30" Opacity="0.8"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="{StaticResource Tertiary}" Offset="0.1"></GradientStop>
+                                        <GradientStop Color="{StaticResource Secondary}" Offset="0.3"></GradientStop>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Padding" Value="40,20,40,20"/>
+                            <Setter Property="TextColor" Value="Black"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ResourceDictionary>

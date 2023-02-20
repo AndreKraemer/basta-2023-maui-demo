@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "title": "Conference Check-In",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "08:00 - 09:00"
+  },
+
+  {
+    "id": 2,
+    "title": "Frontend-Magic mit CSS Houdini",
+    "description": "CSS Houdini beschreibt neue Standards, mit denen CSS nahezu beliebig erweitert werden kann. Das eröffnet völlig neue Möglichkeiten für Styling, Imaging und Animation. Es hilft aber auch den programmatischen Zugriff auf CSS über ein klares Objektmodell zu vereinfachen. Jörg Neumann zeigt die Magie hinter CSS Houdini und gibt einen Ausblick auf die kommenden Standards.",
+    "location": "Ballsall 2",
+    "sessionType": 1,
+    "speakerId": 1,
+    "time": "09:00 - 10:00"
+  },
+  {
+    "id": 3,
+    "title": "Coffee Break",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "10:00 - 10:30"
+  },
+  {
+    "id": 4,
+    "title": "User-Experience-Design für Entwickler",
+    "description": "Schluss mit schlecht gemachten Oberflächen! Gute Apps sehen nicht nur schick aus, sondern sind vor allem benutzbar. Doch wie entwickelt man eine gute Usability? Jörg Neumann zeigt Ihnen Techniken, mit denen Sie sehr leicht Apps entwerfen können, die Ihre Anwender lieben. Zudem zeigt er, wie Sie ohne Reibungsverluste vom ersten Entwurf bis zur fertigen Implementierung kommen.",
+    "location": "Ballsall 2",
+    "sessionType": 1,
+    "speakerId": 1,
+    "time": "10:30 - 11:30"
+  },
+  {
+    "id": 5,
+    "title": "Coffee Berak",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "11:30 - 12:00"
+  },
+  {
+    "id": 6,
+    "title": "Cross-Platform-App-Entwicklung mit .NET MAUI in .NET 7",
+    "description": "Sechs Monate nachdem Microsoft den Xamarin.Forms-Nachfolger .NET MAUI präsentiert hat kam im November 2022 bereits der Nachfolger für .NET 7 heraus. In diesem Vortrag erhalten Sie einen Überblick über die Möglichkeiten, die .NET MAUI bietet und erfahren, was mit .NET 7 Neues hinzugekommen ist. Außerdem werden Sie erfahren, an welchen Stellen der Schuh noch drückt und wo Microsoft noch nachbessern muss.",
+    "location": "Gold 1",
+    "sessionType": 1,
+    "speakerId": 2,
+    "time": "12:00 - 13:00"
+  },
+  {
+    "id": 7,
+    "title": "Lunch",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "13:00 - 14:15"
+  },
+  {
+    "id": 8,
+    "title": "Die Cloud ist tot, lang lebe die Cloud!",
+    "description": "Viele Teams haben gerade erst begonnen, die Vorteile von Cloud-Computing auszunutzen. Sie sind auf den Geschmack gekommen und haben gesehen, dass PaaS- und Serverless-Cloud-Angebote ihre Produktivität deutlich steigern und auch die Sicherheit und Stabilität ihrer Softwareprodukte erhöht. In der Cloud bleibt die Zeit aber nicht stehen. Während sich die einen über ihre ersten, erfolgreichen Gehversuche bezüglich Azure Functions mit Azure SQL freuen, sind andere schon einen Schritt weiter und entwickeln nach dem UI-First-Prinzip. Wozu sich überhaupt mit Backend-APIs und Datenbanken herumplagen, wenn es fix und fertige Backends as a Service gibt? Die einen freuen sich über ihre Azure-Umgebung in West Europe und die anderen haben längst aufgehört, sich über Regionen Gedanken zu machen. Sie nutzen Edge-Clouds und profitieren von globaler Verteilung von Software. In dieser Keynote betrachtet Rainer Stropek praxisrelevante Cloud-Computing-Trends abseits der traditionellen Azure-Cloud. Er zeigt Beispiele und gibt Denkanstöße, wie neue Cloud-Services und Softwarearchitekturen, die kommerzielle Entwicklungsteams in den kommenden Jahren erstellen werden, aussehen könnten.",
+    "location": "Ballsall 1",
+    "sessionType": 2,
+    "speakerId": 3,
+    "time": "14:15 - 15:00"
+  },
+  {
+    "id": 9,
+    "title": "Coffee Break",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "15:00 - 15:30"
+  },
+  {
+    "id": 10,
+    "title": "Blazor Hybrid: Desktop-Apps mit Blazor entwickeln",
+    "description": "Mit Blazor Hybrid lassen sich native Desktopanwendungen mit dem Blazor Framework entwickeln. Die Blazor-Komponenten werden dabei nativ in einer .NET-MAUI-, WPF-, oder WinForms-App ausgeführt und haben Zugriff auf die Ressourcen des Computers. In dieser Session erhalten Sie eine Einführung in Blazor Hybrid und lernen im Live-Coding, wie Sie damit Desktopanwendungen entwickeln können.",
+    "location": "Ballsaal 2",
+    "sessionType": 1,
+    "speakerId": 4,
+    "time": "15:30 - 16:30"
+  },
+  {
+    "id": 11,
+    "title": "Coffee Break",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "16:30 - 17:00"
+  }
+]

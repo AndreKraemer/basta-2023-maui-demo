@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+             x:Class="ConferenceMauiDemo.Views.MapsDemoPage"
+             Title="MapsDemoPage">
+    <Grid RowDefinitions="*,auto" ColumnDefinitions="*,*,*">
+        <maps:Map x:Name="map" Grid.ColumnSpan="3">
+            <x:Arguments>
+                <MapSpan>
+                    <x:Arguments>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>50.5014483</x:Double>
+                                <x:Double>7.308297599999</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </MapSpan>
+            </x:Arguments>
+            <maps:Map.MapElements>
+                <maps:Circle StrokeColor="#091f35"
+                         StrokeWidth="8"
+                         FillColor="#882097c8">
+                    <maps:Circle.Center>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>50.5014483</x:Double>
+                                <x:Double>7.308297599999</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Circle.Center>
+                    <maps:Circle.Radius>
+                        <Distance>
+                            <x:Arguments>
+                                <x:Double>100</x:Double>
+                            </x:Arguments>
+                        </Distance>
+                    </maps:Circle.Radius>
+                </maps:Circle>
+            </maps:Map.MapElements>
+        </maps:Map>
+        <Button Grid.Row="1" Grid.Column="0"  Text="Straße"
+                    Clicked="OnButtonClicked" />
+        <Button Grid.Row="1" Grid.Column="1" Text="Satellit"
+                    Clicked="OnButtonClicked" />
+        <Button Grid.Row="1" Grid.Column="2" Text="Hybrid"
+                    Clicked="OnButtonClicked" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ConferenceMauiDemo.ViewModels"
+             x:DataType="vm:MainPageViewModel"
+             x:Class="ConferenceMauiDemo.Views.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="HeaderStyle">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid RowDefinitions="auto,*">
+            <VerticalStackLayout Padding="0,40,0,0" Spacing="10">
+                <VerticalStackLayout.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
+                        <GradientStop Color="{StaticResource Tertiary}" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background>
+                <Image Source="basta_logo_white.png" MaximumWidthRequest="380" HorizontalOptions="Center" Margin="5,0" />
+                <Label Style="{StaticResource HeaderStyle}">Die Konferenz für .NET, Windows &amp; Open Innovation</Label>
+                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="20. – 24. Februar 2023"/>
+                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="Frankfurt Marriott Hotel oder Online"/>
+                <Path Stroke="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Fill="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Aspect="UniformToFill">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathGeometry.Figures>
+                                <PathFigureCollection>
+                                    <PathFigure IsClosed="True" StartPoint="1,10">
+                                        <PathFigure.Segments>
+                                            <PathSegmentCollection>
+                                                <LineSegment Point="100,10" />
+                                                <LineSegment Point="100,4" />
+                                            </PathSegmentCollection>
+                                        </PathFigure.Segments>
+                                    </PathFigure>
+                                </PathFigureCollection>
+                            </PathGeometry.Figures>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" Padding="40" Spacing="10">
+                <Label FontSize="20" TextColor="{StaticResource Secondary}">OFFENE INNOVATION ERLEBEN </Label>
+                <Label FontSize="Small">
+                    Neue Lösungen für zukünftige Herausforderungen – mit unseren praxisbezogenen Keynotes, Sessions und Power-Workshops sind Sie immer am Puls der Microsoft-Zeit.
+                </Label>
+                <Label FontSize="20" TextColor="{StaticResource Secondary}">DIE ZUKUNFT ENTWICKELN</Label>
+                <Label FontSize="Small">
+                    Starke Kompetenz in C#, .NET, Cloud- und Webtechnologien machen die BASTA! seit mehr als 20 Jahren zur führenden Konferenz für Microsoft-Technologien, Web und mehr.
+                </Label>
+                <Label FontSize="20" TextColor="{StaticResource Secondary}">KERN- KOMPETENZEN OPTIMIEREN</Label>
+                <Label FontSize="Small">
+                    Die Vielfalt der Technologie-Welt auf einer Konferenz: Ob Cloud oder Server, Agile oder DevOps – die BASTA! vermittelt das Wissen, das Sie als .NET-Entwickler weiterbringt!
+                </Label>                
+                <Button Text=" Zum Programm " Style="{StaticResource HoverButton}" Command="{Binding NavigateToSessionsCommand}"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -4,11 +4,81 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ConferenceMauiDemo"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:ConferenceMauiDemo.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout BackgroundColor="{StaticResource Primary}" Padding="50">
+            <Image Source="basta_logo.png" WidthRequest="200"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="MainPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconHouse}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Programm"
+        ContentTemplate="{DataTemplate views:SessionsPageMarkup}"
+        Route="SessionsPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconPersonChalkboard}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Hover- und Klick-Demo"
+        ContentTemplate="{DataTemplate views:PointerDemos}"
+        Route="PointerDemos">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconHandPointer}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <FlyoutItem Title="Plattform-Code">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconCodeFork}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
+        </FlyoutItem.Icon>
+        <ShellContent
+        Title="Präprozessoranweisungen"
+        ContentTemplate="{DataTemplate views:PraeprozessorDemoPage}"
+        Route="PraeprozessorDemoPage" />
+
+        <ShellContent
+        Title="Partielle Klassen"
+        ContentTemplate="{DataTemplate views:PartialDemoPage}"
+        Route="PartialDemoPage" />
+
+        <ShellContent
+        Title="Partielle Klassen (via Dateinamen)"
+        ContentTemplate="{DataTemplate views:PartialFileNameBaseDemoPage}"
+        Route="PartialFileNameBaseDemoPage" />
+
+        <ShellContent
+        Title="Dependency Injection"
+        ContentTemplate="{DataTemplate views:DependencyInjectionDemoPage}"
+        Route="DependencyInjectionDemoPage" />
+    </FlyoutItem>
+
+    <ShellContent
+        Title="Maps Demo"
+        ContentTemplate="{DataTemplate views:MapsDemoPage}"
+        Route="MapsDemoPage"
+        IsVisible="{OnPlatform true, WinUI=false}">
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconMapLocationDot}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
+        </ShellContent.Icon>
+    </ShellContent>
 
 </Shell>

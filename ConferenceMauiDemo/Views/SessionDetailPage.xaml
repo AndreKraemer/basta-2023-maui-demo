@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConferenceMauiDemo.Views.SessionDetailPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:ConferenceMauiDemo.ViewModels"
+             Title="{Binding Session.Title}"
+             x:DataType="vm:SessionDetailPageViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HeadingStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="Margin" Value="10,0"/>
+            </Style>
+            <toolkit:IsNotNullConverter x:Key="IsNotNullConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Border StrokeThickness="0" StrokeShape="RoundRectangle 0,0,90,45" >
+                <Image Source="{Binding Session.Speaker.Image}" Aspect="AspectFit"/>
+            </Border>
+
+            <Label Text="{Binding Session.Title}"
+                   Margin="20,30,20,0"
+                   FontSize="Title"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
+                   FontAttributes="Bold"/>
+
+            <FlexLayout Margin="20,5,20,0" AlignItems="Start" Direction="Row" Wrap="Wrap">
+                <Label Text="{Binding Session.Speaker.Name, StringFormat='{0} |'}"
+                   FontSize="Caption"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap"/>
+                <Label Text="{Binding Session.Speaker.Company, StringFormat='{0} |'}"
+                   FontSize="Caption"
+                   TextColor="{StaticResource Gray400}"
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap"/>
+                <Label Text="{Binding Session.Speaker.Twitter}"
+                   FontSize="Caption"
+                   TextColor="{StaticResource Blue100Accent}"
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenTwitterCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </FlexLayout>
+            <HorizontalStackLayout Margin="20,5,20,0">
+                <Label Text="{Binding Session.Time}"
+                   FontSize="Caption"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
+                   FontAttributes="Bold"
+                       VerticalOptions="Center"/>
+                <Border StrokeShape="RoundRectangle 45,45,45,45" StrokeThickness="0" BackgroundColor="LightGreen" Margin="10,0">
+                    <Label Text="{Binding Session.SessionType}" 
+                           Padding="10,3" 
+                           TextColor="DarkGreen" FontAttributes="Bold"/>
+                </Border>
+            </HorizontalStackLayout>
+
+            <Label Text="{Binding Session.Description}" Margin="20" TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"/>
+            <Label Text="Ort" Style="{StaticResource HeadingStyle}"
+                   IsVisible="{Binding Session.Location, Converter={StaticResource IsNotNullConverter}}" />
+            <Label Text="{Binding Session.Location}" TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
