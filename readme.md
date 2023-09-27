@@ -1,6 +1,6 @@
-﻿Dies ist das Beispielprojekt zu meinem Vortrag auf der [Basta Spring 2023](https://basta.net/user-interface/durchstarten-mit-net-maui/).
+﻿Dies ist das Beispielprojekt zu meinem Vortrag auf der [Basta 2023](https://basta.net/net-framework-c/net-maui-c-sharp/).
 
-Zum ausführen des Quellcodes wird [Visual Studio 2022 17.4.5](https://visualstudio.microsoft.com/de/vs/) 
+Zum ausführen des Quellcodes wird [Visual Studio 2022 17.7.4](https://visualstudio.microsoft.com/de/vs/) 
 inklusive des Workloads Mobile Entwicklung mit .NET benötigt.
 
 Die Anwendung demonstriert folgendes:
@@ -21,9 +21,10 @@ Die Anwendung demonstriert folgendes:
 - Tooltips (nur unter Windows und macOS)
 - Pointer-Events (nur unter Windows und macOS)
 - Primärer und sekundärer Klick (rechtsklick) (nur unter Windows und macOS)
-- Darstellung von Karten (nicht unter Windows, da dies unter .NET MAUI 7 dort nicht unterstüzt wird)
+- Darstellung von Karten (unter Windows über das MAUI Community Toolkit, da Karten nativ unter .NET MAUI 7 in WinUI nicht nativ unterstüzt werden)
+- COM-Interop (Word-Automatisierung) unter Windows
 
-Unter Android muss für die Darstellung von Karten ein API-Key in der Datei `AndroidManifest.xml` hinterlegt werden.
+Unter Android muss für die Darstellung von Karten ein API-Key in der Datei `AndroidManifest.xml` hinterlegt werden. Für Windows muss ein BING-MAPS-Key in der Datei startup.cs eingefügt werden.
 
 ## Weitere Informationen zu .NET MAUI
 Weitere Informationen zu .NET MAUI gibt es in meinem Buch [Cross-Plattform-Apps mit .NET MAUI entwickeln](https://www.andrekraemer.de/maui-buch)
