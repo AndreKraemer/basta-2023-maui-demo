@@ -25,8 +25,8 @@
                 </VerticalStackLayout.Background>
                 <Image Source="basta_logo_white.png" MaximumWidthRequest="380" HorizontalOptions="Center" Margin="5,0" />
                 <Label Style="{StaticResource HeaderStyle}">Die Konferenz für .NET, Windows &amp; Open Innovation</Label>
-                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="20. – 24. Februar 2023"/>
-                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="Frankfurt Marriott Hotel oder Online"/>
+                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="25. – 29. September 2023"/>
+                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="Rheingoldhalle Mainz oder Online"/>
                 <Path Stroke="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Fill="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Aspect="UniformToFill">
                     <Path.Data>
                         <PathGeometry>

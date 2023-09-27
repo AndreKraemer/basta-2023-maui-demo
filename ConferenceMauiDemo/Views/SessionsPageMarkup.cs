@@ -75,7 +75,7 @@ namespace ConferenceMauiDemo.Views
         private void BuildMenu()
         {
             var fileMenu = new MenuBarItem { Text = "Datei" };
-            fileMenu.Add(new MenuFlyoutItem().Text("Export"));
+            fileMenu.Add(new MenuFlyoutItem().Text("Export").BindCommand(path: nameof(SessionsPageViewModel.ExportSessionsCommand))); ;
             fileMenu.Add(new MenuFlyoutItem().Text("Beenden"));
             var helpMenu = new MenuBarItem { Text = "Hilfe" };
             helpMenu.Add(new MenuFlyoutItem().Text("Info"));
@@ -83,6 +83,10 @@ namespace ConferenceMauiDemo.Views
             MenuBarItems.Clear();
             MenuBarItems.Add(fileMenu);
             MenuBarItems.Add(helpMenu);
+
+#if __MOBILE__
+            ToolbarItems.Add(new ToolbarItem().Text("Export").BindCommand(path: nameof(SessionsPageViewModel.ExportSessionsCommand)));
+            #endif
         }
 
         private DataTemplate BuildBreakTemplate()
@@ -207,7 +211,7 @@ namespace ConferenceMauiDemo.Views
                             new Border
                             {
                                StrokeShape = new RoundRectangle { CornerRadius = new CornerRadius(15), StrokeThickness = 0},
-                               Content = new Image{ MaximumWidthRequest = 130, Aspect = Aspect.AspectFill }
+                               Content = new Image{ WidthRequest = 150, HeightRequest = 140, Aspect = Aspect.AspectFill }
                                             .Bind(Image.SourceProperty, static ( Session session) => session.Speaker.Image)
                                             .Margin(new Thickness(0,0,10,0))
                             }.RowSpan(3).Column(NumericCols.Second).Margin(5),

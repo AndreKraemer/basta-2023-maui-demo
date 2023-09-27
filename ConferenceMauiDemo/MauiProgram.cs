@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Maps;
 using CommunityToolkit.Maui.Markup;
 using ConferenceMauiDemo.Services;
 using ConferenceMauiDemo.ViewModels;
@@ -9,7 +10,11 @@ namespace ConferenceMauiDemo;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    #region BING MAPS KEY
+    private const string bingMapsKey = "INSERT YOUR KEY HERE!";
+    #endregion
+
+    public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
@@ -17,6 +22,7 @@ public static class MauiProgram
 			.UseMauiMaps()
 			.UseMauiCommunityToolkit()
 			.UseMauiCommunityToolkitMarkup()
+            .UseMauiCommunityToolkitMaps(bingMapsKey)
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -29,6 +35,7 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<IDataService, FileDataService>();
+        builder.Services.AddSingleton<IExportService, CsvExportService>();
         builder.Services.AddSingleton<IDialogService, DialogService>();
         builder.Services.AddTransient<MainPage, MainPageViewModel>();
         builder.Services.AddTransient<SessionsPage, SessionsPageViewModel>();

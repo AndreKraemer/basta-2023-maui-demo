@@ -72,8 +72,8 @@
     <ShellContent
         Title="Maps Demo"
         ContentTemplate="{DataTemplate views:MapsDemoPage}"
-        Route="MapsDemoPage"
-        IsVisible="{OnPlatform true, WinUI=false}">
+        Route="MapsDemoPage">
+        <!--IsVisible="{OnPlatform true, WinUI=false}">-->
 
         <ShellContent.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 

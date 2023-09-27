@@ -1,4 +1,5 @@
-﻿using ConferenceMauiDemo.Services;
+﻿using ConferenceMauiDemo.Platforms.Windows;
+using ConferenceMauiDemo.Services;
 using ConferenceMauiDemo.WinUI;
 
 namespace ConferenceMauiDemo
@@ -8,6 +9,8 @@ namespace ConferenceMauiDemo
         public static void RegisterPlatformServices(this IServiceCollection services)
         {
             services.AddTransient<IDeviceInformation, WindowsDeviceInformation>();
+
+            //services.AddTransient<IExportService, WordExportService>();
         }
     }
 }

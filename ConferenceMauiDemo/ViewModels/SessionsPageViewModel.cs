@@ -18,15 +18,17 @@ public partial class SessionsPageViewModel
     private readonly IDataService _dataService;
     private readonly IApplication _application;
     private readonly IDialogService _dialogService;
+    private readonly IExportService _exportService;
 
     public ObservableCollection<Session> Sessions => _sessions;
 
 
-    public SessionsPageViewModel(IDataService dataService, IApplication application, IDialogService dialogService)
+    public SessionsPageViewModel(IDataService dataService, IApplication application, IDialogService dialogService, IExportService exportService)
     {
         _dataService = dataService;
         _application = application;
         _dialogService = dialogService;
+        _exportService = exportService;
     }
 
     public async Task Initialize()
@@ -123,5 +125,11 @@ public partial class SessionsPageViewModel
         var toast = Toast.Make(message, ToastDuration.Long, 28);
 
         await toast.Show();
+    }
+
+    [RelayCommand]
+    private async Task ExportSessions()
+    {
+        await _exportService.ExportSessions(_sessions);
     }
 }
